@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        // Create an ItemStore
+        let prescriptionStore = ItemStore()
+        // Access the PrescriptionsViewController and set its item store
+        let prescriptionController = window!.rootViewController as! PrescriptionsViewController
+        prescriptionController.prescriptionStore = prescriptionStore
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

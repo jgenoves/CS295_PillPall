@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		054AD4FB2429053900A5D67D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD4FA2429053900A5D67D /* AppDelegate.swift */; };
 		054AD4FD2429053900A5D67D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD4FC2429053900A5D67D /* SceneDelegate.swift */; };
-		054AD4FF2429053900A5D67D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD4FE2429053900A5D67D /* ViewController.swift */; };
 		054AD5022429053900A5D67D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054AD5002429053900A5D67D /* Main.storyboard */; };
 		054AD5042429054100A5D67D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 054AD5032429054100A5D67D /* Assets.xcassets */; };
 		054AD5072429054100A5D67D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054AD5052429054100A5D67D /* LaunchScreen.storyboard */; };
 		054AD5122429054100A5D67D /* PillPall_CS295_IndividualTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD5112429054100A5D67D /* PillPall_CS295_IndividualTests.swift */; };
 		054AD51D2429054100A5D67D /* PillPall_CS295_IndividualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD51C2429054100A5D67D /* PillPall_CS295_IndividualUITests.swift */; };
+		054AD53024290A5600A5D67D /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD52E24290A5600A5D67D /* Prescription.swift */; };
+		054AD53124290A5600A5D67D /* PrescriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD52F24290A5600A5D67D /* PrescriptionController.swift */; };
+		054AD5332429128600A5D67D /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD5322429128600A5D67D /* ItemStore.swift */; };
+		05ECBA6C242FB36A0033CD24 /* PrescriptionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECBA6B242FB36A0033CD24 /* PrescriptionDetailController.swift */; };
+		05ECBA6E242FBCBE0033CD24 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECBA6D242FBCBE0033CD24 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 		054AD4F72429053900A5D67D /* PillPall CS295 Individual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PillPall CS295 Individual.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		054AD4FA2429053900A5D67D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		054AD4FC2429053900A5D67D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		054AD4FE2429053900A5D67D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		054AD5012429053900A5D67D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		054AD5032429054100A5D67D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		054AD5062429054100A5D67D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		054AD5182429054100A5D67D /* PillPall CS295 IndividualUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PillPall CS295 IndividualUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		054AD51C2429054100A5D67D /* PillPall_CS295_IndividualUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillPall_CS295_IndividualUITests.swift; sourceTree = "<group>"; };
 		054AD51E2429054100A5D67D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		054AD52E24290A5600A5D67D /* Prescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
+		054AD52F24290A5600A5D67D /* PrescriptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionController.swift; sourceTree = "<group>"; };
+		054AD5322429128600A5D67D /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		05ECBA6B242FB36A0033CD24 /* PrescriptionDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionDetailController.swift; sourceTree = "<group>"; };
+		05ECBA6D242FBCBE0033CD24 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,17 @@
 		054AD4F92429053900A5D67D /* PillPall CS295 Individual */ = {
 			isa = PBXGroup;
 			children = (
+				054AD52E24290A5600A5D67D /* Prescription.swift */,
+				054AD52F24290A5600A5D67D /* PrescriptionController.swift */,
 				054AD4FA2429053900A5D67D /* AppDelegate.swift */,
 				054AD4FC2429053900A5D67D /* SceneDelegate.swift */,
-				054AD4FE2429053900A5D67D /* ViewController.swift */,
 				054AD5002429053900A5D67D /* Main.storyboard */,
 				054AD5032429054100A5D67D /* Assets.xcassets */,
 				054AD5052429054100A5D67D /* LaunchScreen.storyboard */,
 				054AD5082429054100A5D67D /* Info.plist */,
+				054AD5322429128600A5D67D /* ItemStore.swift */,
+				05ECBA6B242FB36A0033CD24 /* PrescriptionDetailController.swift */,
+				05ECBA6D242FBCBE0033CD24 /* ItemCell.swift */,
 			);
 			path = "PillPall CS295 Individual";
 			sourceTree = "<group>";
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				054AD4FF2429053900A5D67D /* ViewController.swift in Sources */,
+				054AD53024290A5600A5D67D /* Prescription.swift in Sources */,
+				054AD53124290A5600A5D67D /* PrescriptionController.swift in Sources */,
+				05ECBA6C242FB36A0033CD24 /* PrescriptionDetailController.swift in Sources */,
 				054AD4FB2429053900A5D67D /* AppDelegate.swift in Sources */,
+				05ECBA6E242FBCBE0033CD24 /* ItemCell.swift in Sources */,
+				054AD5332429128600A5D67D /* ItemStore.swift in Sources */,
 				054AD4FD2429053900A5D67D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
