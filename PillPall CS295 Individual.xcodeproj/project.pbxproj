@@ -17,6 +17,7 @@
 		054AD53024290A5600A5D67D /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD52E24290A5600A5D67D /* Prescription.swift */; };
 		054AD53124290A5600A5D67D /* PrescriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD52F24290A5600A5D67D /* PrescriptionController.swift */; };
 		054AD5332429128600A5D67D /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AD5322429128600A5D67D /* ItemStore.swift */; };
+		05B877AA244B618500B87CF6 /* PrescriptionEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B877A9244B618500B87CF6 /* PrescriptionEditorController.swift */; };
 		05ECBA6C242FB36A0033CD24 /* PrescriptionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECBA6B242FB36A0033CD24 /* PrescriptionDetailController.swift */; };
 		05ECBA6E242FBCBE0033CD24 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECBA6D242FBCBE0033CD24 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		054AD52E24290A5600A5D67D /* Prescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
 		054AD52F24290A5600A5D67D /* PrescriptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionController.swift; sourceTree = "<group>"; };
 		054AD5322429128600A5D67D /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		05B877A9244B618500B87CF6 /* PrescriptionEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionEditorController.swift; sourceTree = "<group>"; };
 		05ECBA6B242FB36A0033CD24 /* PrescriptionDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionDetailController.swift; sourceTree = "<group>"; };
 		05ECBA6D242FBCBE0033CD24 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				054AD5322429128600A5D67D /* ItemStore.swift */,
 				05ECBA6B242FB36A0033CD24 /* PrescriptionDetailController.swift */,
 				05ECBA6D242FBCBE0033CD24 /* ItemCell.swift */,
+				05B877A9244B618500B87CF6 /* PrescriptionEditorController.swift */,
 			);
 			path = "PillPall CS295 Individual";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				054AD53024290A5600A5D67D /* Prescription.swift in Sources */,
 				054AD53124290A5600A5D67D /* PrescriptionController.swift in Sources */,
+				05B877AA244B618500B87CF6 /* PrescriptionEditorController.swift in Sources */,
 				05ECBA6C242FB36A0033CD24 /* PrescriptionDetailController.swift in Sources */,
 				054AD4FB2429053900A5D67D /* AppDelegate.swift in Sources */,
 				05ECBA6E242FBCBE0033CD24 /* ItemCell.swift in Sources */,

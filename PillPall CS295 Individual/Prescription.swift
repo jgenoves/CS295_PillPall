@@ -86,7 +86,7 @@ class Prescription: NSObject, NSCoding {
                 patientCondition: "",
                 isActive: false,
                 typeOfMedication: "",
-                id: ""
+                id: UUID().uuidString.components(separatedBy: "-").first!
             )
         }
     }

@@ -30,6 +30,13 @@ class ItemStore {
             
         }
     }
+    
+    @discardableResult func createBlankPrescription() -> Prescription {
+        let newPrescription = Prescription(random: false)
+        allItems.append(newPrescription)
+        return newPrescription
+    }
+    
 
     @discardableResult func createPrescription() -> Prescription {
         let newPrescription = Prescription(random: true)

@@ -27,11 +27,15 @@ class PrescriptionDetailViewController: UIViewController {
     @IBOutlet var conditionLabel_1: UILabel!
     @IBOutlet var conditionLabel_2: UILabel!
     
+    @IBOutlet var editButton: UIButton!
+    
     
     var prescription: Prescription!
     
     
-    override func viewWillAppear(_ animated: Bool) { super.viewWillAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         nameLabel.text = prescription.name
         typeLabel.text = prescription.typeOfMedication
         doseageLabel.text = prescription.doseage
@@ -53,6 +57,24 @@ class PrescriptionDetailViewController: UIViewController {
         formatter.timeStyle = .none
         return formatter
     }()
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        switch segue.identifier {
+        case "editPrescription"?:
+            let editPrescriptionController = segue.destination as! PrescriptionEditorViewController
+            editPrescriptionController.prescription = self.prescription
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+            
+        
+        }
+            
+            
+        
+        
+    }
     
     
     

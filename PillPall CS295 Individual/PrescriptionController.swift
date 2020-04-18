@@ -23,6 +23,12 @@ class PrescriptionsViewController: UITableViewController {
         tableView.rowHeight = 65
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        
+    }
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return prescriptionStore.allItems.count
@@ -59,7 +65,19 @@ class PrescriptionsViewController: UITableViewController {
                 let detailViewController = segue.destination as! PrescriptionDetailViewController
                 detailViewController.prescription = prescription
             }
-        
+        case "addPrescription"?:
+            let addNewPrescriptionController = segue.destination as! PrescriptionEditorViewController
+            let newPrescription = prescriptionStore.createBlankPrescription()
+            
+            if let index = prescriptionStore.allItems.index(of: newPrescription) {
+                        let indexPath = IndexPath(row: index, section: 0)
+                            // Insert this new row into the table
+                        tableView.insertRows(at: [indexPath], with: .automatic)
+            
+            }
+            addNewPrescriptionController.prescription = newPrescription
+            
+            
         default:
             preconditionFailure("Unexpected segue identifier.")
             
@@ -70,15 +88,15 @@ class PrescriptionsViewController: UITableViewController {
     }
     
     @IBAction func addNewItem(_ sender: UIButton) {
-        // Create a new item and add it to the store
-        let newItem = prescriptionStore.createPrescription()
-        // Figure out where that item is in the array
-        if let index = prescriptionStore.allItems.index(of: newItem) {
-            let indexPath = IndexPath(row: index, section: 0)
-                // Insert this new row into the table
-            tableView.insertRows(at: [indexPath], with: .automatic)
-            
-        }
+//        // Create a new item and add it to the store
+//        let newItem = prescriptionStore.createPrescription()
+//        // Figure out where that item is in the array
+//        if let index = prescriptionStore.allItems.index(of: newItem) {
+//            let indexPath = IndexPath(row: index, section: 0)
+//                // Insert this new row into the table
+//            tableView.insertRows(at: [indexPath], with: .automatic)
+//
+//        }
         
     }
        
