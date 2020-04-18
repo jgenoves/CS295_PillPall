@@ -76,6 +76,27 @@ class PrescriptionDetailViewController: UIViewController {
         
     }
     
+    @IBAction func deletePrescription(_ sender: UIBarButtonItem) {
+        let prescription = self.prescription
+        
+        let title = "Delete \(prescription!.name)?"
+        let message = "Are you sure you want to delete this item?"
+        let ac = UIAlertController(title: title, message: message,preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cancelAction)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
+            // Remove the item from the store
+            let navStack = self.view.window?.rootViewController as? UINavigationController
+            let tableView = navStack?.viewControllers[0] as? PrescriptionsViewController
+            tableView?.prescriptionStore.removeItem(prescription!)
+            navStack?.popViewController(animated: true)
+            
+        })
+        ac.addAction(deleteAction)
+        present(ac, animated: true, completion: nil)
+    }
+    
     
     
     
