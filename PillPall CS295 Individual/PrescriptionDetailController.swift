@@ -40,7 +40,7 @@ class PrescriptionDetailViewController: UIViewController {
         lastFilledLabel_2.text = dateFormatter.string(from: prescription.lastFilled)
         conditionLabel_2.text = prescription.patientCondition
         
-        if(prescription.isActive){
+        if(!prescription.isActive){
             isActiveImage.tintColor = UIColor.systemGray
         }
         

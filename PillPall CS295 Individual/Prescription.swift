@@ -7,7 +7,8 @@
 //
 
 import UIKit
-class Prescription: NSObject {
+class Prescription: NSObject, NSCoding {
+    
     var name: String
     var lastFilled: Date
     var doseage: String
@@ -88,6 +89,36 @@ class Prescription: NSObject {
                 id: ""
             )
         }
+    }
+    
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(lastFilled, forKey: "lastFilled")
+        aCoder.encode(doseage, forKey: "doseage")
+        aCoder.encode(prescriber, forKey: "prescriber")
+        aCoder.encode(frequency, forKey: "frequency")
+        aCoder.encode(patientCondition, forKey: "patientCondition")
+        aCoder.encode(isActive, forKey: "isActive")
+        aCoder.encode(typeOfMedication, forKey: "typeOfMedication")
+        aCoder.encode(id, forKey: "id")
+        
+    }
+    
+    
+    required init(coder aDecoder: NSCoder) {
+        name = aDecoder.decodeObject(forKey: "name") as! String
+        lastFilled = aDecoder.decodeObject(forKey: "lastFilled") as! Date
+        doseage = aDecoder.decodeObject(forKey: "doseage") as! String
+        prescriber = aDecoder.decodeObject(forKey: "prescriber") as! String
+        frequency = aDecoder.decodeObject(forKey: "frequency") as! String
+        patientCondition = aDecoder.decodeObject(forKey: "patientCondition") as! String
+        
+        isActive = aDecoder.decodeBool(forKey: "isActive")
+        typeOfMedication = aDecoder.decodeObject(forKey: "typeOfMedication") as! String
+        id = aDecoder.decodeObject(forKey: "id") as! String
+        super.init()
+        
     }
 
     
